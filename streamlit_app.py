@@ -27,4 +27,6 @@ gb.configure_column(field="tf", header_name="처리 상태", width=80, editable=
 gb.configure_column(field="noop", header_name="비고", width=80, editable=True)
 go = gb.build()
 
-AgGrid(data, gridOptions=go)
+AgGrid(data,
+       gridOptions=go,
+       columns_auto_size_mode=ColumnsAutoSizeMode.FIT_ALL_COLUMNS_TO_VIEW)
