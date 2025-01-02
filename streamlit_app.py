@@ -14,7 +14,7 @@ def change_label_style(label, font_size='12px', font_color='black', font_family=
     """
     st.components.v1.html(html)
 
-st.markdown("<span style='font-size: 20px;'>오류중학교 정보화 기기 수리 요청 대장</span>")
+st.markdown("<span style='font-size: 20px;'>오류중학교 정보화 기기 수리 요청 대장</span>", unsafe_allow_html=True)
 
 
 colms = st.columns((2, 2, 4, 4, 2, 1,2))
