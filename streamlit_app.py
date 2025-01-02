@@ -23,5 +23,3 @@ for col, field_name in zip(colms, fields):
     col.write(field_name)
     st.checkbox('hh')
     change_label_style(fields, '5px')
-
-st.table(pd.
