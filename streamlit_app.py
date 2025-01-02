@@ -16,7 +16,7 @@ data = pd.DataFrame([{'make_date': '11',
 
 gb = GridOptionsBuilder()
 gb.configure_default_column(
-  resizable=True,
+  resizable=False,
   filterable=False,
   sortable=False,
   sorteable=False,
