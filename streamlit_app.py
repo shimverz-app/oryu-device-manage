@@ -19,7 +19,8 @@ gb.configure_default_column(
   resizable=False,
   filterable=False,
   sortable=False,
-  groupable=False
+  groupable=False,
+  suppressFiltersToolPanel=True
 )
 
 gb.configure_column(field="make_date", header_name="요청 날짜", editable=True)
