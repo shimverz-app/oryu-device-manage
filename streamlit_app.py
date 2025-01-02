@@ -12,3 +12,5 @@ for col, field_name in zip(colms, fields):
     col.write(field_name)
     col.checkbox('hh{}'.format(i))
     i +=1
+
+st.table(['hh','zz'])
