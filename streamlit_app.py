@@ -18,4 +18,4 @@ gb.configure_column(field="make_date", header_name="요청 날짜", width=80)
 go = gb.build()
 
 df = pd.read_csv('https://raw.githubusercontent.com/fivethirtyeight/data/master/airline-safety/airline-safety.csv')
-AgGrid(df)
+AgGrid(df, gridOptions=go)
