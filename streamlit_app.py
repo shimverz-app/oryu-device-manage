@@ -24,13 +24,13 @@ gb.configure_default_column(
   unSortIcon=True
 )
 
-gb.configure_column(field="make_date", header_name="요청 날짜", editable=True)
-gb.configure_column(field="people", header_name="수리 요청인")
-gb.configure_column(field="place", header_name="수리 대상물 위치(부서/교실)")
-gb.configure_column(field="device", header_name="수리 점검 물품(ex.컴퓨터, 노트북)")
-gb.configure_column(field="happen", header_name="고장 상태")
-gb.configure_column(field="tf", header_name="처리 상태", editable=True)
-gb.configure_column(field="noop", header_name="비고", editable=True)
+gb.configure_column(field="make_date", header_name="요청 날짜",  suppressMenu=True, sortable=False, filter=False)
+gb.configure_column(field="people", header_name="수리 요청인", suppressMenu=True, sortable=False, filter=False)
+gb.configure_column(field="place", header_name="수리 대상물 위치(부서/교실)", suppressMenu=True, sortable=False, filter=False)
+gb.configure_column(field="device", header_name="수리 점검 물품(ex.컴퓨터, 노트북)", suppressMenu=True, sortable=False, filter=False)
+gb.configure_column(field="happen", header_name="고장 상태", suppressMenu=True, sortable=False, filter=False)
+gb.configure_column(field="tf", header_name="처리 상태", editable=True, suppressMenu=True, sortable=False, filter=False)
+gb.configure_column(field="noop", header_name="비고", editable=True, suppressMenu=True, sortable=False, filter=False)
 go = gb.build()
 
 AgGrid(data,
