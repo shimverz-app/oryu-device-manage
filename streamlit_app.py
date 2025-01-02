@@ -8,7 +8,7 @@ GridOptions = {
     "columnDefs":[
         {
             "headerName": "요청 날짜",
-            "field": "요청 날짜"
+            "field": "요청 날짜",
             "cellDataType": "date"
         }
     ]
