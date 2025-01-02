@@ -23,7 +23,7 @@ gb.configure_default_column(
   suppressFiltersToolPanel=True
 )
 
-gb.configure_column(field="make_date", header_name="요청 날짜", editable=True)
+gb.configure_column(field="make_date", header_name="요청 날짜", editable=True, suppressFiltersToolPanel=True)
 gb.configure_column(field="people", header_name="수리 요청인")
 gb.configure_column(field="place", header_name="수리 대상물 위치(부서/교실)")
 gb.configure_column(field="device", header_name="수리 점검 물품(ex.컴퓨터, 노트북)")
