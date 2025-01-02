@@ -12,9 +12,8 @@ gb.configure_default_column(
     resizable=True,
     filterable=True,
     sortable=True,
-    editable=True,
 )
-gb.configure_column(field="make_date", header_name="요청 날짜", width=80)
+gb.configure_column(field="make_date", header_name="요청 날짜", editable=True, width=80)
 go = gb.build()
 
 AgGrid(data, gridOptions=go)
