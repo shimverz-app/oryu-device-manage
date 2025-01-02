@@ -13,7 +13,7 @@ gb.configure_default_column(
     filterable=True,
     sortable=True,
 )
-gb.configure_column(field="make_date", header_name="요청 날짜", editable=True, width=80)
+gb.configure_column(field="make_date", header_name="요청 날짜", editable=True, width=200)
 gb.configure_column(field="people", header_name="수리 요청인", editable=False, width=80)
 go = gb.build()
 
