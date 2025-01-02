@@ -18,6 +18,7 @@ gb = GridOptionsBuilder()
 gb.configure_default_column(
     resizable=False
 )
+gb.
 gb.configure_column(field="make_date", header_name="요청 날짜", editable=True, width=90)
 gb.configure_column(field="people", header_name="수리 요청인", width=80)
 gb.configure_column(field="place", header_name="수리 대상물 위치(부서/교실)", width=80)
@@ -29,4 +30,5 @@ go = gb.build()
 
 AgGrid(data,
        gridOptions=go,
-       columns_auto_size_mode=ColumnsAutoSizeMode.FIT_ALL_COLUMNS_TO_VIEW)
+       columns_auto_size_mode=ColumnsAutoSizeMode.FIT_ALL_COLUMNS_TO_VIEW,
+      fit_columns_on_grid_load=True)
