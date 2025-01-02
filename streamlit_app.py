@@ -32,7 +32,9 @@ gb.configure_column(field="noop", header_name="비고", editable=True, suppressM
 go = gb.build()
 go['suppressMovableColumns'] = True
 
-AgGrid(data,
+response = AgGrid(
+  data,
   gridOptions=go,
   fit_columns_on_grid_load=False,
-  columns_auto_size_mode=ColumnsAutoSizeMode.FIT_CONTENTS)
+  columns_auto_size_mode=ColumnsAutoSizeMode.FIT_CONTENTS
+)
