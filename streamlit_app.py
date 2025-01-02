@@ -30,5 +30,4 @@ go = gb.build()
 
 AgGrid(data,
        gridOptions=go,
-       columns_auto_size_mode=ColumnsAutoSizeMode.FIT_ALL_COLUMNS_TO_VIEW,
-      fit_columns_on_grid_load=True)
+       columns_auto_size_mode=ColumnsAutoSizeMode.FIT_ALL_COLUMNS_TO_VIEW)
