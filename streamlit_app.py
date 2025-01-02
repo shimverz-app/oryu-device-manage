@@ -19,13 +19,13 @@ gb.configure_default_column(
     resizable=False
 )
 
-gb.configure_column(field="make_date", header_name="요청 날짜", editable=True, width=90)
-gb.configure_column(field="people", header_name="수리 요청인", width=80)
-gb.configure_column(field="place", header_name="수리 대상물 위치(부서/교실)", width=80)
-gb.configure_column(field="device", header_name="수리 점검 물품(ex.컴퓨터, 노트북)", width=80)
-gb.configure_column(field="happen", header_name="고장 상태", width=80)
-gb.configure_column(field="tf", header_name="처리 상태", width=80, editable=True)
-gb.configure_column(field="noop", header_name="비고", width=80, editable=True)
+gb.configure_column(field="make_date", header_name="요청 날짜", editable=True)
+gb.configure_column(field="people", header_name="수리 요청인")
+gb.configure_column(field="place", header_name="수리 대상물 위치(부서/교실)")
+gb.configure_column(field="device", header_name="수리 점검 물품(ex.컴퓨터, 노트북)")
+gb.configure_column(field="happen", header_name="고장 상태")
+gb.configure_column(field="tf", header_name="처리 상태", editable=True)
+gb.configure_column(field="noop", header_name="비고", editable=True)
 go = gb.build()
 
 AgGrid(data,
