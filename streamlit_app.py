@@ -34,7 +34,7 @@ go = gb.build()
 go['suppressMovableColumns'] = True
 
 response = AgGrid(
-  data,
+  df,
   gridOptions=go,
   columns_auto_size_mode=ColumnsAutoSizeMode.FIT_CONTENTS
 )
