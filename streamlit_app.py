@@ -6,7 +6,7 @@ st.markdown("<span style='font-size: 23px;'>오류중학교 정보화 기기 수
 
 GridOptions = {
     "columnDefs":[
-        0: {
+        {
             "headerName": "요청 날짜",
             "field": "요청 날짜"
             "cellDataType": "date"
