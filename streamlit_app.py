@@ -21,4 +21,7 @@ colms = st.columns((0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 2))
 fields = ['만든 날짜', '수리 요청인', '수리 대상물 위치(부서/교실)', '수리 점검 물품(ex.컴퓨터, 노트북)', '고장 상태', '처리 상태', '비고']
 for col, field_name in zip(colms, fields):
   col.write(field_name)
+    st.checkbox('hh')
   change_label_style(fields, '5px')
+
+st.table(pd.
