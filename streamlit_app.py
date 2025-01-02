@@ -19,7 +19,7 @@ gb.configure_default_column(
   resizable=False,
   filterable=False,
   sortable=False,
-  groupable=False
+  groupable=False,
   suppressMenuHide=True
 )
 
