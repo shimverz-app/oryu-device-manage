@@ -16,11 +16,12 @@ data = pd.DataFrame([{'make_date': '11',
 
 gb = GridOptionsBuilder()
 gb.configure_default_column(
-  resizable=False,
+  resizable=True,
   filterable=False,
   sortable=False,
   sorteable=False,
-  groupable=False
+  groupable=False,
+  suppressSizeToFit
 )
 
 gb.configure_column(field="make_date", header_name="요청 날짜", editable=True)
