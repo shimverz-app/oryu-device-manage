@@ -19,7 +19,6 @@ gb.configure_default_column(
   resizable=False,
   filterable=False,
   sortable=False,
-  sorteable=False,
   groupable=False
 )
 
