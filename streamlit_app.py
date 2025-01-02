@@ -9,8 +9,7 @@ GridOptions = {
     "columnDefs":[
         {
             "headerName": "요청 날짜",
-            "field": "make_date",
-            "cellDataType": "date"
+            "field": "make_date"
         }
     ]
 }
@@ -25,4 +24,4 @@ for col, field_name in zip(colms, fields):
 
 st.table(['hh','zz', st.checkbox('gkgkgk')])
 
-grid_return = AgGrid([{'make_date': dt.datetime.now()}])
+grid_return = AgGrid([{'make_date': '11'}])
