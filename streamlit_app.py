@@ -13,4 +13,4 @@ for col, field_name in zip(colms, fields):
     col.checkbox('hh{}'.format(i))
     i +=1
 
-st.table(['hh','zz'])
+st.table(['hh','zz', st.checkbox('gkgkgk')])
