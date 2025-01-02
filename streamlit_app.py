@@ -33,5 +33,6 @@ go = gb.build()
 go['suppressMovableColumns'] = True
 
 AgGrid(data,
-       gridOptions=go,
-       fit_columns_on_grid_load=True)
+  gridOptions=go,
+  fit_columns_on_grid_load=False,
+  columns_auto_size_mode=ColumnsAutoSizeMode.FIT_ALL_COLUMNS_TO_VIEW)
