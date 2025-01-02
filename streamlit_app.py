@@ -16,10 +16,11 @@ data = pd.DataFrame([{'make_date': '11',
 
 gb = GridOptionsBuilder()
 gb.configure_default_column(
-  resizable=False,
   filterable=False,
   sortable=False,
-  groupable=False
+  groupable=False,
+  resizable=True,
+  autoSizeColumns=True
 )
 
 gb.configure_column(field="make_date", header_name="요청 날짜",  suppressMenu=True, sortable=False, filter=False)
@@ -35,6 +36,5 @@ go['suppressMovableColumns'] = True
 response = AgGrid(
   data,
   gridOptions=go,
-  fit_columns_on_grid_load=False,
-  columns_auto_size_mode=ColumnsAutoSizeMode.FIT_CONTENTS
+  fit_columns_on_grid_load=False
 )
