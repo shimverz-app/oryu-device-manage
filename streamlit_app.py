@@ -34,6 +34,6 @@ go['suppressMovableColumns'] = True
 
 response = AgGrid(
   data,
-  gridOptions=go
+  gridOptions=go,
   columns_auto_size_mode=ColumnsAutoSizeMode.FIT_CONTENTS
 )
