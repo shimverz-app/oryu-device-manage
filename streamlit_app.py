@@ -16,9 +16,7 @@ data = pd.DataFrame([{'make_date': '11',
 
 gb = GridOptionsBuilder()
 gb.configure_default_column(
-    resizable=True,
-    filterable=True,
-    sortable=True,
+    resizable=False
 )
 gb.configure_column(field="make_date", header_name="요청 날짜", editable=True, width=200)
 gb.configure_column(field="people", header_name="수리 요청인", width=80)
