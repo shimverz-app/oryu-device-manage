@@ -33,6 +33,7 @@ gb.configure_column(field="tf", header_name="처리 상태", editable=True, supp
 gb.configure_column(field="noop", header_name="비고", editable=True, suppressMenu=True, sortable=False, filter=False)
 go = gb.build()
 go['suppressMovableColumns'] = True
+go["onGridReady"] = lambda params: params.api.sizeColumnsToFit()
 AgGrid(data,
        gridOptions=go,
        columns_auto_size_mode=ColumnsAutoSizeMode.FIT_ALL_COLUMNS_TO_VIEW)
