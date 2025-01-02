@@ -16,3 +16,5 @@ gb.configure_default_column(
 )
 gb.configure_column(field="make_date", header_name="요청 날짜", width=80)
 go = gb.build()
+
+AgGrid(data, gridOptions=go)
