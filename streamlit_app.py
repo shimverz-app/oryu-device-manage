@@ -20,8 +20,6 @@ gb.configure_default_column(
   filterable=False,
   sortable=False,
   groupable=False,
-  suppressMenuHide=True,
-  unSortIcon=True
 )
 
 gb.configure_column(field="make_date", header_name="요청 날짜",  suppressMenu=True, sortable=False, filter=False)
@@ -36,4 +34,4 @@ go['suppressMovableColumns'] = True
 
 AgGrid(data,
        gridOptions=go,
-       columns_auto_size_mode=ColumnsAutoSizeMode.FIT_ALL_COLUMNS_TO_VIEW)
+       fit_columns_on_grid_load=True)
