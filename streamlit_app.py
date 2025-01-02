@@ -5,7 +5,7 @@ from st_aggrid import AgGrid, GridOptionsBuilder, ColumnsAutoSizeMode
 
 st.markdown("<span style='font-size: 23px;'>오류중학교 정보화 기기 수리 요청 대장</span>", unsafe_allow_html=True)
 
-data = pd.DataFrame([{'make_date': '11',
+df = pd.DataFrame([{'make_date': '11',
                       'people': '김도윤',
                       'place': '교육정보부',
                       'device': '컴퓨터',
@@ -14,7 +14,7 @@ data = pd.DataFrame([{'make_date': '11',
                       'noop': ''
                      }])
 
-gb = GridOptionsBuilder()
+gb = GridOptionsBuilder().from_dataframe(df)
 gb.configure_default_column(
   filterable=False,
   sortable=False,
