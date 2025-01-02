@@ -24,4 +24,4 @@ for col, field_name in zip(colms, fields):
 
 st.table(['hh','zz', st.checkbox('gkgkgk')])
 
-grid_return = AgGrid([{'make_date': '11'}])
+grid_return = AgGrid([{'make_date': '11'}], gridOptions=GridOptions)
