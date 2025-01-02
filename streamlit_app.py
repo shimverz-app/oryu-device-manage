@@ -14,7 +14,7 @@ def change_label_style(label, font_size='12px', font_color='black', font_family=
     """
     st.components.v1.html(html)
 
-st.subheader("오류중학교 정보화 기기 수리 요청 대장")
+st.markdown("오류중학교 정보화 기기 수리 요청 대장")
 
 
 colms = st.columns((2, 2, 4, 4, 2, 1,2))
