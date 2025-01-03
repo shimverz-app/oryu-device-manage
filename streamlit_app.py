@@ -133,6 +133,7 @@ response = AgGrid(
   columns_auto_size_mode=ColumnsAutoSizeMode.FIT_CONTENTS,
     allow_unsafe_jscode=True
 )
-if st.experimental_get_query_params():  # 실제로는 서버에서 요청 처리
-    updated_data = st.experimental_get_query_params()  # 클라이언트 요청 데이터
+
+if st.query_params:
+    updated_data = st.query_params
     st.write("서버에서 받은 업데이트 요청:", updated_data)
