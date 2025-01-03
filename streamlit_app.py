@@ -25,8 +25,7 @@ st.write(r.json())
 access_token = r.json()['access_token']
 
 headers = {
-    "Authorization": f"Bearer {access_token}",
-    "Accept": "application/json;odata=verbose"
+    "Authorization": f"Bearer {access_token}"
 }
 
 r = requests.get('https://graph.microsoft.com/v1.0/sites', headers=headers)
