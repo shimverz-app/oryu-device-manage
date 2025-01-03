@@ -7,15 +7,6 @@ import json
 
 r = requests.get("https://naver.com")
 
-token = {
-  'grant_type': 'password',
-  'scope': '',
-  'client_id': '',
-  'username': 'shimverz@oryu.sen.ms.kr',
-  'password': '@ehdbs0330',
-  'client_secret': ''
-}
-
 st.markdown("<span style='font-size: 23px;'>오류중학교 정보화 기기 수리 요청 대장</span>", unsafe_allow_html=True)
 
 df = pd.DataFrame([{'make_date': '11',
