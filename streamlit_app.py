@@ -23,7 +23,7 @@ r = requests.post('https://login.microsoftonline.com/4e732c26-acb5-4964-b7fe-cba
     'client_secret': st.secrets.client_secret
 })
 
-st.write(r.json())
+st.write(r.json()['access_token'])
 
 st.markdown(
     """
