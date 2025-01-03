@@ -94,7 +94,10 @@ gb.configure_grid_options(
         // 서버로 요청 전송
         fetch('https://graph.microsoft.com/v1.0/groups/e49eee20-ef81-4f29-93aa-951daa958fca/sites/root/lists/7cbc9d8e-f383-46c8-a205-22ac00f3d842/items/'+event.data.id+'/fields', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer " + st.session_state.access_token + "'
+            },
             body: updatedData
         })
         .then(response => {
