@@ -16,7 +16,7 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-    .stAppHeader, .ag-watermark {
+    .stAppHeader, ._container_gzau3_1, ._profileContainer_gzau3_53 {
         display: none;
     }
     </style>
