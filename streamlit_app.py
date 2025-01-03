@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import datetime as dt
-from st_aggrid import AgGrid, GridOptionsBuilder, ColumnsAutoSizeMode
+from st_aggrid import AgGrid, GridOptionsBuilder, ColumnsAutoSizeMode, JsCode
 import requests
 import json
 
@@ -84,13 +84,13 @@ gb.configure_column(field="_xace0__xc7a5__xc0c1__xd0dc__x00", header_name="고�
 gb.configure_column(field="_xcc98__xb9ac__xc0c1__xd0dc_", header_name="처리 상태", editable=True, suppressMenu=True, sortable=False, filter=False)
 gb.configure_column(field="_xbe44__xace0_", header_name="비고", editable=True, suppressMenu=True, sortable=False, filter=False)
 go = gb.build()
-go['getRowStyle'] = """
+go['getRowStyle'] = JsCode("""
     function(params) {
         if (params.data._xcc98__xb9ac__xc0c1__xd0dc_ === false) {
             return { background: 'red', color: 'white' };
         }
     }
-"""
+""")
 
 go['suppressMovableColumns'] = True
 
