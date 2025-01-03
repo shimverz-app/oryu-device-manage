@@ -27,7 +27,7 @@ access_token = r.json()['access_token']
 headers = {
     "Authorization": f"Bearer {access_token}",
     "Accept": "application/json;odata=verbose",
-    "Content-Type": "application/json;odata=verbose"
+    "Content-Type": "application/json;"
 }
 
 r = requests.get('https://graph.microsoft.com/v1.0/sites', headers=headers)
