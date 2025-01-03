@@ -26,10 +26,8 @@ def token_generate():
         st.write(r.json())
         st.session_state.access_tokens = { createdTime: dt.datetime.now(), expireTime: datetime.timedelta(seconds=r.json()['expires_in']), access_token: r.json()['access_token'] }
 
-
-
 headers = {
-    "Authorization": f"Bearer {access_token}"
+    "Authorization": f"Bearer {st.session_state.access_tokens.access_token}"
 }
 
 r = requests.get('https://graph.microsoft.com/v1.0/groups/e49eee20-ef81-4f29-93aa-951daa958fca/sites/root/lists/7cbc9d8e-f383-46c8-a205-22ac00f3d842/items?' +
