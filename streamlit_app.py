@@ -8,7 +8,6 @@ import json
 st.set_page_config(
     page_title="오류중학교 정보화 기기 수리 요청 대장",
     page_icon="🧊",
-    layout="wide",
     initial_sidebar_state="expanded",
     menu_items={}
 )
