@@ -15,8 +15,8 @@ st.set_page_config(
 
 def token_generate():
     if 'access_tokens' not in st.session_state:
-        st.session_state.access_tokens = { "createdTime": dt.datetime.now(), "expireTime": datetime.timedelta(seconds=0), "access_token": '' }
-    if st.session_state.access_token.createdTime + expireTime > dt.datetime.now() + datetime.timedelta(seconds=10):
+        st.session_state.access_tokens = { "createdTime": dt.datetime.now(), "expireTime": dt.timedelta(seconds=0), "access_token": '' }
+    if st.session_state.access_token.createdTime + expireTime > dt.datetime.now() + dt.timedelta(seconds=10):
         return
     else:
         r = requests.post('https://login.microsoftonline.com/4e732c26-acb5-4964-b7fe-cba67063c366/oauth2/v2.0/token', data={
@@ -24,7 +24,7 @@ def token_generate():
             'username': st.secrets.username, 'password': st.secrets.password, 'client_secret': st.secrets.client_secret })
 
         st.write(r.json())
-        st.session_state.access_tokens = { "createdTime": dt.datetime.now(), "expireTime": datetime.timedelta(seconds=r.json()['expires_in']), "access_token": r.json()['access_token'] }
+        st.session_state.access_tokens = { "createdTime": dt.datetime.now(), "expireTime": dt.timedelta(seconds=r.json()['expires_in']), "access_token": r.json()['access_token'] }
 
 token_generate()
 
