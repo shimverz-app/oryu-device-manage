@@ -51,8 +51,6 @@ flattened_data = [
     for item in r.json()['value']
 ]
 
-st.write(flattened_data)
-
 st.markdown(
     """
     <style>
