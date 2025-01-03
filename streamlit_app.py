@@ -77,7 +77,11 @@ gb.configure_default_column(
   autoSizeColumns=True
 )
 
-gb.configure_grid_options(defaultColDef={"sortable": True}, sortModel=[{"colId": "id", "sort": "desc"}])
+gb.configure_grid_options(defaultColDef={"sortable": True},
+                          onGridReady="""
+                          function(params) {
+                          params.api.setSortModel([{colId: 'id', sort: 'desc'}]);}
+                          """)
 
 gb.configure_column(field="id", header_name="id",  suppressMenu=True, sortable=True, filter=False)
 gb.configure_column(field="Created", header_name="요청 날짜",  suppressMenu=True, sortable=False, filter=False)
