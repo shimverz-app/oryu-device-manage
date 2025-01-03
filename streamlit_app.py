@@ -75,6 +75,16 @@ gb.configure_default_column(
   autoSizeColumns=True
 )
 
+gb.configure_grid_options(
+    getRowStyle="""
+    function(params) {
+        if (params.data._xcc98__xb9ac__xc0c1__xd0dc_ === false) {
+            return { 'background': 'red', 'color': 'white' };
+        }
+    }
+    """
+)
+
 gb.configure_column(field="id", header_name="id",  suppressMenu=True, sortable=False, filter=False)
 gb.configure_column(field="Created", header_name="요청 날짜",  suppressMenu=True, sortable=False, filter=False)
 gb.configure_column(field="Title", header_name="수리 요청인", suppressMenu=True, sortable=False, filter=False)
