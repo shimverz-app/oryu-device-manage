@@ -98,7 +98,7 @@ gb.configure_grid_options(
             'Content-Type': 'application/json',
             'Authorization': 'Bearer {st.session_state.access_token}'
             }},
-            body: updatedData
+            body: JSON.stringify(updatedData)
         }})
         .then(response => {{
             if (!response.ok) {{
