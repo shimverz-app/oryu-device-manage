@@ -90,8 +90,31 @@ gb.configure_grid_options(
             '_xcc98__xb9ac__xc0c1__xd0dc_': event.data._xcc98__xb9ac__xc0c1__xd0dc_,
             '_xbe44__xace0_': event.data._xbe44__xace0_
         };
-        console.log(event.data.id);
-        console.log(event.data._xcc98__xb9ac__xc0c1__xd0dc_);
+
+        // 서버로 요청 전송
+        fetch('https://graph.microsoft.com/v1.0/groups/e49eee20-ef81-4f29-93aa-951daa958fca/sites/root/lists/7cbc9d8e-f383-46c8-a205-22ac00f3d842/items/'+event.data.id+'/fields', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: updatedData
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('서버 오류');  // 에러 발생 시 처리
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('업데이트 성공:', data);
+        })
+        .catch(error => {
+            console.error('업데이트 실패:', error);
+            // 변경 취소: 이전 상태로 복구
+            const transaction = {
+                update: [event.oldData]  // 변경 전 데이터로 되돌리기
+            };
+            event.api.applyTransaction(transaction);
+        });
+    }
     }
     """)
 )
