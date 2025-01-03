@@ -59,13 +59,13 @@ st.markdown(
 
 st.markdown("<span style='font-size: 23px;'>오류중학교 정보화 기기 수리 요청 대장</span>", unsafe_allow_html=True)
 
-df = pd.DataFrame([{'make_date': '11',
-                      'people': '김도윤',
-                      'place': '교육정보부',
-                      'device': '컴퓨터',
-                      'happen': '컴퓨터 안켜짐',
-                      'tf': True,
-                      'noop': ''
+df = pd.DataFrame([{'Created': '11',
+                      'Title': '김도윤',
+                      '_x314e__x314e_': '교육정보부',
+                      '_xc218__xb9ac__xc810__xac80__xbb': '컴퓨터',
+                      '_xace0__xc7a5__xc0c1__xd0dc__x00': '컴퓨터 안켜짐',
+                      '_xcc98__xb9ac__xc0c1__xd0dc_': True,
+                      '_xbe44__xace0_': ''
                      }])
 
 gb = GridOptionsBuilder().from_dataframe(df)
@@ -77,13 +77,13 @@ gb.configure_default_column(
   autoSizeColumns=True
 )
 
-gb.configure_column(field="make_date", header_name="요청 날짜",  suppressMenu=True, sortable=False, filter=False)
-gb.configure_column(field="people", header_name="수리 요청인", suppressMenu=True, sortable=False, filter=False)
-gb.configure_column(field="place", header_name="수리 대상물 위치(부서/교실)", suppressMenu=True, sortable=False, filter=False)
-gb.configure_column(field="device", header_name="수리 점검 물품(ex.컴퓨터, 노트북)", suppressMenu=True, sortable=False, filter=False)
-gb.configure_column(field="happen", header_name="고장 상태", suppressMenu=True, sortable=False, filter=False)
-gb.configure_column(field="tf", header_name="처리 상태", editable=True, suppressMenu=True, sortable=False, filter=False)
-gb.configure_column(field="noop", header_name="비고", editable=True, suppressMenu=True, sortable=False, filter=False)
+gb.configure_column(field="Created", header_name="요청 날짜",  suppressMenu=True, sortable=False, filter=False)
+gb.configure_column(field="Title", header_name="수리 요청인", suppressMenu=True, sortable=False, filter=False)
+gb.configure_column(field="_x314e__x314e_", header_name="수리 대상물 위치(부서/교실)", suppressMenu=True, sortable=False, filter=False)
+gb.configure_column(field="_xc218__xb9ac__xc810__xac80__xbb", header_name="수리 점검 물품(ex.컴퓨터, 노트북)", suppressMenu=True, sortable=False, filter=False)
+gb.configure_column(field="_xace0__xc7a5__xc0c1__xd0dc__x00", header_name="고장 상태", suppressMenu=True, sortable=False, filter=False)
+gb.configure_column(field="_xcc98__xb9ac__xc0c1__xd0dc_", header_name="처리 상태", editable=True, suppressMenu=True, sortable=False, filter=False)
+gb.configure_column(field="_xbe44__xace0_", header_name="비고", editable=True, suppressMenu=True, sortable=False, filter=False)
 go = gb.build()
 go['suppressMovableColumns'] = True
 
