@@ -87,6 +87,7 @@ gb.configure_grid_options(
     onCellValueChanged=JsCode("""
     function(event) {
         console.log(event.data.id);
+        console.log(event.data._xcc98__xb9ac__xc0c1__xd0dc_);
     }
     """)
 )
