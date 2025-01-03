@@ -79,7 +79,7 @@ gb.configure_grid_options(
     getRowStyle=JsCode("""
     function(params) {
         if (params.data._xcc98__xb9ac__xc0c1__xd0dc_ === false) {
-            return { 'background': rgba(255,0,0,0.1) };
+            return { 'background-color': rgba(255,0,0,0.1) };
         }
     }
     """)
