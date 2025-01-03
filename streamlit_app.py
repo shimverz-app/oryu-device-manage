@@ -72,6 +72,7 @@ gb = GridOptionsBuilder().from_dataframe(df)
 gb.configure_default_column(
   filterable=False,
   groupable=False,
+    sortable=True,
   resizable=False,
   autoSizeColumns=True
 )
