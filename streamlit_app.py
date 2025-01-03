@@ -15,7 +15,7 @@ st.set_page_config(
 
 def token_generate():
     if 'access_tokens' not in st.session_state:
-        st.session_state.access_tokens = { createdTime: dt.datetime.now(), expireTime: datetime.timedelta(seconds=0), access_token: '' }
+        st.session_state.access_tokens = { "createdTime": dt.datetime.now(), "expireTime": datetime.timedelta(seconds=0), "access_token": '' }
     if st.session_state.access_token.createdTime + expireTime > dt.datetime.now() + datetime.timedelta(seconds=10):
         return
     else:
@@ -24,7 +24,7 @@ def token_generate():
             'username': st.secrets.username, 'password': st.secrets.password, 'client_secret': st.secrets.client_secret })
 
         st.write(r.json())
-        st.session_state.access_tokens = { createdTime: dt.datetime.now(), expireTime: datetime.timedelta(seconds=r.json()['expires_in']), access_token: r.json()['access_token'] }
+        st.session_state.access_tokens = { "createdTime": dt.datetime.now(), "expireTime": datetime.timedelta(seconds=r.json()['expires_in']), "access_token": r.json()['access_token'] }
 
 token_generate()
 
