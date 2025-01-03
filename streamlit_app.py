@@ -87,30 +87,7 @@ gb.configure_grid_options(
     onCellValueChanged=JsCode("""
     function(event) {
         const updatedRow = event.data;  // 변경된 행의 데이터
-
-        // 서버로 요청 전송
-        fetch('/update-data', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(updatedRow)
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('서버 오류');  // 에러 발생 시 처리
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log('업데이트 성공:', data);
-        })
-        .catch(error => {
-            console.error('업데이트 실패:', error);
-            // 변경 취소: 이전 상태로 복구
-            const transaction = {
-                update: [event.oldData]  // 변경 전 데이터로 되돌리기
-            };
-            event.api.applyTransaction(transaction);
-        });
+        return updateRow
     }
     """)
 )
