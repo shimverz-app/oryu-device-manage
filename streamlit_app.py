@@ -10,7 +10,11 @@ st.set_page_config(
     page_icon="🧊",
     layout="wide",
     initial_sidebar_state="expanded",
-    menu_items={}
+    menu_items={
+        'Get Help': 'https://www.extremelycoolapp.com/help',
+        'Report a bug': "https://www.extremelycoolapp.com/bug",
+        'About': "# This is a header. This is an *extremely* cool app!"
+    }
 )
 
 st.markdown("<span style='font-size: 23px;'>오류중학교 정보화 기기 수리 요청 대장</span>", unsafe_allow_html=True)
