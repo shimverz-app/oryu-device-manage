@@ -24,10 +24,13 @@ r = requests.post('https://login.microsoftonline.com/4e732c26-acb5-4964-b7fe-cba
 st.write(r.json())
 access_token = r.json()['access_token']
 
-r = requests.get('https://sen0698-my.sharepoint.com/sites/msteams_047d4c', headers={
-    "Authorization": "Bearer " + access_token,
-    "Accept": "application/json;odata=verbose"    
-})
+headers = {
+    "Authorization": f"Bearer {access_token}",
+    "Accept": "application/json;odata=verbose",
+    "Content-Type": "application/json;odata=verbose"
+}
+
+r = requests.get('https://sen0698-my.sharepoint.com/sites/msteams_047d4c', headers=headers)
 
 st.write(r.text)
 
