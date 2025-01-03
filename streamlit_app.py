@@ -29,7 +29,7 @@ r = requests.get('https://sen0698-my.sharepoint.com/sites/msteams_047d4c/_api/we
     "Accept": "application/json;odata=verbose"    
 })
 
-st.write(r.json())
+st.write(r.text)
 
 st.markdown(
     """
