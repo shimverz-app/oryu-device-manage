@@ -30,7 +30,7 @@ headers = {
     "Content-Type": "application/json;odata=verbose"
 }
 
-r = requests.get('https://graph.microsoft.com/v1.0/lists', headers=headers)
+r = requests.get('https://graph.microsoft.com/v1.0', headers=headers)
 
 st.write(r.text)
 
