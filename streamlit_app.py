@@ -80,7 +80,7 @@ gb.configure_default_column(
 gb.configure_grid_options(defaultColDef={"sortable": True},
                           onGridReady="""
                           function(params) {
-                          params.api.setSortModel([{colId: 'id', sort: 'desc'}]);}
+                          params.api.applyColumnState([{state: {'colId': 'id', 'sort': 'desc'}]);}
                           """)
 
 gb.configure_column(field="id", header_name="id",  suppressMenu=True, sortable=True, filter=False)
