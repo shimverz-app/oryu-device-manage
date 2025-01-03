@@ -75,16 +75,6 @@ gb.configure_default_column(
   autoSizeColumns=True
 )
 
-gb.configure_grid_options(
-    getRowStyle="""
-    function(params) {
-        if (params.data._xcc98__xb9ac__xc0c1__xd0dc_ === false) {
-            return { 'background': 'red', 'color': 'white' };
-        }
-    }
-    """
-)
-
 gb.configure_column(field="id", header_name="id",  suppressMenu=True, sortable=False, filter=False)
 gb.configure_column(field="Created", header_name="요청 날짜",  suppressMenu=True, sortable=False, filter=False)
 gb.configure_column(field="Title", header_name="수리 요청인", suppressMenu=True, sortable=False, filter=False)
@@ -94,6 +84,14 @@ gb.configure_column(field="_xace0__xc7a5__xc0c1__xd0dc__x00", header_name="고�
 gb.configure_column(field="_xcc98__xb9ac__xc0c1__xd0dc_", header_name="처리 상태", editable=True, suppressMenu=True, sortable=False, filter=False)
 gb.configure_column(field="_xbe44__xace0_", header_name="비고", editable=True, suppressMenu=True, sortable=False, filter=False)
 go = gb.build()
+go['getRowStyle'] = """
+    function(params) {
+        if (params.data._xcc98__xb9ac__xc0c1__xd0dc_ === false) {
+            return { background: 'red', color: 'white' };
+        }
+    }
+"""
+
 go['suppressMovableColumns'] = True
 
 response = AgGrid(
