@@ -5,6 +5,13 @@ from st_aggrid import AgGrid, GridOptionsBuilder, ColumnsAutoSizeMode
 import requests
 import json
 
+st.set_page_config(
+    page_title="Ex-stream-ly Cool App",
+    page_icon="🧊",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    menu_items={}
+
 r = requests.get("https://naver.com")
 st.write(r.text)
 st.markdown("<span style='font-size: 23px;'>오류중학교 정보화 기기 수리 요청 대장</span>", unsafe_allow_html=True)
