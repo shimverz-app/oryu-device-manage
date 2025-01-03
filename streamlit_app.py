@@ -66,7 +66,7 @@ st.markdown(
 
 st.markdown("<span style='font-size: 23px;'>오류중학교 정보화 기기 수리 요청 대장</span>", unsafe_allow_html=True)
 
-df = pd.DataFrame(flattened_data.sort_values(by='id')
+df = pd.DataFrame(flattened_data.sort_values(by='id'))
 
 gb = GridOptionsBuilder().from_dataframe(df)
 gb.configure_default_column(
@@ -76,12 +76,6 @@ gb.configure_default_column(
   resizable=False,
   autoSizeColumns=True
 )
-
-gb.configure_grid_options(defaultColDef={"sortable": True},
-                          onGridReady="""
-                          function(params) {
-                          params.api.applyColumnState([{state: {'colId': 'id', 'sort': 'desc'}]);}
-                          """)
 
 gb.configure_column(field="id", header_name="id",  suppressMenu=True, sortable=False, filter=False)
 gb.configure_column(field="Created", header_name="요청 날짜",  suppressMenu=True, sortable=False, filter=False)
