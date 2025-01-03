@@ -26,6 +26,8 @@ def token_generate():
         st.write(r.json())
         st.session_state.access_tokens = { createdTime: dt.datetime.now(), expireTime: datetime.timedelta(seconds=r.json()['expires_in']), access_token: r.json()['access_token'] }
 
+token_generate()
+
 headers = {
     "Authorization": f"Bearer {st.session_state.access_tokens.access_token}"
 }
