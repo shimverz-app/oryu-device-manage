@@ -13,6 +13,8 @@ st.set_page_config(
     menu_items={}
 )
 
+st.write(st.secrets.username)
+
 st.markdown(
     """
     <style>
