@@ -16,7 +16,7 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-    .stAppHeader {
+    .stAppHeader, .ag-watermark {
         display: none;
     }
     </style>
