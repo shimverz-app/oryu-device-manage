@@ -115,7 +115,7 @@ gb.configure_grid_options(
             event.api.applyTransaction(transaction);
         });
     }
-    }
+
     """)
 )
 
