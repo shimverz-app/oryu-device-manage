@@ -87,8 +87,8 @@ gb.configure_grid_options(
     onCellValueChanged=JsCode("""
     function(event) {
         const updatedData = {
-            _xcc98__xb9ac__xc0c1__xd0dc_: event.data._xcc98__xb9ac__xc0c1__xd0dc_
-            _xbe44__xace0_: event.data._xbe44__xace0_
+            '_xcc98__xb9ac__xc0c1__xd0dc_': event.data._xcc98__xb9ac__xc0c1__xd0dc_
+            '_xbe44__xace0_': event.data._xbe44__xace0_
         };
         console.log(event.data.id);
         console.log(event.data._xcc98__xb9ac__xc0c1__xd0dc_);
