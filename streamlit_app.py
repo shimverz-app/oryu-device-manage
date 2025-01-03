@@ -42,7 +42,6 @@ r = requests.get('https://graph.microsoft.com/v1.0/groups/e49eee20-ef81-4f29-93a
                  'expand=' +
                  'fields(select=Created,Title,_x314e__x314e_,_xc218__xb9ac__xc810__xac80__xbb,_xace0__xc7a5__xc0c1__xd0dc__x00,_xcc98__xb9ac__xc0c1__xd0dc_,_xbe44__xace0_)', headers=headers)
 
-st.write(r.json())
 flattened_data = [
     {
         key: value for key, value in {
