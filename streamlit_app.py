@@ -77,6 +77,7 @@ gb.configure_default_column(
   autoSizeColumns=True
 )
 
+gb.configure_column(field="id", header_name="id",  suppressMenu=True, sortable=False, filter=False, hide=True)
 gb.configure_column(field="Created", header_name="요청 날짜",  suppressMenu=True, sortable=False, filter=False)
 gb.configure_column(field="Title", header_name="수리 요청인", suppressMenu=True, sortable=False, filter=False)
 gb.configure_column(field="_x314e__x314e_", header_name="수리 대상물 위치(부서/교실)", suppressMenu=True, sortable=False, filter=False)
