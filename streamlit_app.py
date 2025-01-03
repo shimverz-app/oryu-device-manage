@@ -28,7 +28,7 @@ headers = {
     "Authorization": f"Bearer {access_token}"
 }
 
-r = requests.get('https://graph.microsoft.com/v1.0/sites', headers=headers)
+r = requests.get('https://graph.microsoft.com/v1.0/sites/sen0698.sharepoint.com', headers=headers)
 
 st.write(r.text)
 
