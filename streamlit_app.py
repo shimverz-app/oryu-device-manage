@@ -30,7 +30,7 @@ headers = {
     "Content-Type": "application/json;odata=verbose"
 }
 
-r = requests.get('https://sen0698-my.sharepoint.com/sites/msteams_047d4c', headers=headers)
+r = requests.get('https://sen0698-my.sharepoint.com/_api/web', headers=headers)
 
 st.write(r.text)
 
