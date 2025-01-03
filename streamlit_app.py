@@ -87,7 +87,7 @@ gb.configure_grid_options(
     onCellValueChanged=JsCode("""
     function(event) {
         const updatedRow = event.data;  // 변경된 행의 데이터
-        return updateRow
+        console.log(updateRow)
     }
     """)
 )
