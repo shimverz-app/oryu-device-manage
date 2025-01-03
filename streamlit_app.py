@@ -71,7 +71,6 @@ df = pd.DataFrame(flattened_data)
 gb = GridOptionsBuilder().from_dataframe(df)
 gb.configure_default_column(
   filterable=False,
-  sortable=False,
   groupable=False,
   resizable=False,
   autoSizeColumns=True
