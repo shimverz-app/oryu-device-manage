@@ -28,7 +28,7 @@ headers = {
     "Authorization": f"Bearer {access_token}"
 }
 
-r = requests.get('https://graph.microsoft.com/v1.0/groups/e49eee20-ef81-4f29-93aa-951daa958fca/lists', headers=headers)
+r = requests.get('https://graph.microsoft.com/v1.0/groups/e49eee20-ef81-4f29-93aa-951daa958fca/sites/root', headers=headers)
 
 st.write(r.text)
 
