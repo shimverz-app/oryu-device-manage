@@ -100,5 +100,6 @@ go['suppressMovableColumns'] = True
 response = AgGrid(
   df,
   gridOptions=go,
-  columns_auto_size_mode=ColumnsAutoSizeMode.FIT_CONTENTS
+  columns_auto_size_mode=ColumnsAutoSizeMode.FIT_CONTENTS,
+    allow_unsafe_jscode=True
 )
