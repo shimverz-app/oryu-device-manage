@@ -24,7 +24,7 @@ r = requests.post('https://login.microsoftonline.com/4e732c26-acb5-4964-b7fe-cba
 st.write(r.json())
 access_token = r.json()['access_token']
 
-r = requests.get('https://sen0698-my.sharepoint.com/sites/msteams_047d4c/_api/web/lists/GetByTitle('YourListName')/items', headers={
+r = requests.get('https://sen0698-my.sharepoint.com/sites/msteams_047d4c/_api/web/lists/GetByTitle("오류중학교 정보화 기기 수리 요청 대장")/items', headers={
     "Authorization": "Bearer " + access_token,
     "Accept": "application/json;odata=verbose"    
 })
