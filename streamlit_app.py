@@ -76,7 +76,7 @@ gb.configure_default_column(
 )
 
 gb.configure_grid_options(
-    getRowStyle=JSCode("""
+    getRowStyle=JsCode("""
     function(params) {
         if (params.data._xcc98__xb9ac__xc0c1__xd0dc_ === false) {
             return { 'background': 'red', 'color': 'white' };
