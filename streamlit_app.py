@@ -84,7 +84,7 @@ gb.configure_grid_options(
     }
     """),
 
-    onCellValueChanged=JsCode("""
+    onCellValueChanged=JsCode(f"""
     function(event) {
         const updatedData = {
             '_xcc98__xb9ac__xc0c1__xd0dc_': event.data._xcc98__xb9ac__xc0c1__xd0dc_,
@@ -96,7 +96,7 @@ gb.configure_grid_options(
             method: 'PATCH',
             headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer " + st.session_state.access_token + "'
+            'Authorization': 'Bearer {st.session_state.access_token}'
             },
             body: updatedData
         })
