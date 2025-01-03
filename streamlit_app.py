@@ -15,6 +15,7 @@ token = {
   'password': '@ehdbs0330',
   'client_secret': ''
 }
+st.write(token)
 
 st.markdown("<span style='font-size: 23px;'>오류중학교 정보화 기기 수리 요청 대장</span>", unsafe_allow_html=True)
 
