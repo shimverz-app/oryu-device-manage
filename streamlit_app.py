@@ -5,7 +5,7 @@ from st_aggrid import AgGrid, GridOptionsBuilder, ColumnsAutoSizeMode
 import requests
 import json
 
-r = requests.get("")
+r = requests.get("https://naver.com")
 
 token = {
   'grant_type': 'password',
