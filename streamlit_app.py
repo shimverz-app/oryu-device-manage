@@ -12,8 +12,7 @@ st.set_page_config(
     initial_sidebar_state="expanded",
     menu_items={}
 )
-r = requests.get("https://naver.com")
-st.write(r.text)
+
 st.markdown("<span style='font-size: 23px;'>오류중학교 정보화 기기 수리 요청 대장</span>", unsafe_allow_html=True)
 
 df = pd.DataFrame([{'make_date': '11',
