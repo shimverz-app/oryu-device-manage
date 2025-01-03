@@ -87,7 +87,7 @@ gb.configure_grid_options(
     onCellValueChanged=JsCode("""
     function(event) {
         const updatedRow = {
-        '_xbe44__xace0_': event.data_xbe44__xace0_
+        '_xbe44__xace0_': event.data._xbe44__xace0_
         '_xcc98__xb9ac__xc0c1__xd0dc_': event.data._xcc98__xb9ac__xc0c1__xd0dc_
         };  // 변경된 행의 데이터
     }
