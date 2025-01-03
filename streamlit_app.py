@@ -21,7 +21,7 @@ r = requests.post('https://login.microsoftonline.com/4e732c26-acb5-4964-b7fe-cba
     'password': st.secrets.password,
     'client_secret': st.secrets.client_secret
 })
-
+st.write(r.json())
 access_token = r.json()['access_token']
 
 r = requests.get('https://sen0698-my.sharepoint.com/_api/web/lists', headers={
