@@ -13,7 +13,6 @@ st.set_page_config(
     menu_items={}
 )
 
-st.write(st.secrets["username"])
 r = requests.post('https://login.microsoftonline.com/4e732c26-acb5-4964-b7fe-cba67063c366/oauth2/v2.0/token', data={
     'grant_type': 'password',
     'scope': 'https://graph.microsoft.com/Directory.ReadWrite.All',
@@ -23,7 +22,15 @@ r = requests.post('https://login.microsoftonline.com/4e732c26-acb5-4964-b7fe-cba
     'client_secret': st.secrets.client_secret
 })
 
-st.write(r.json()['access_token'])
+access_token = r.json()['access_token']
+
+https://sen0698-my.sharepoint.com/personal/shimverz_oryu_sen_ms_kr/Lists/List/AllItems.aspx
+r = requests.get('https://sen0698-my.sharepoint.com/_api/web/lists', header={
+    "Authorization": "Bearer " + access_token,
+    "Accept": "application/json;odata=verbose"    
+})
+
+st.write(r.json())
 
 st.markdown(
     """
