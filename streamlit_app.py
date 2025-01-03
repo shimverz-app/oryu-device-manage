@@ -91,7 +91,7 @@ gb.configure_grid_options(
         '_xcc98__xb9ac__xc0c1__xd0dc_': event._xcc98__xb9ac__xc0c1__xd0dc_
         };  // 변경된 행의 데이터
         // 서버로 요청 전송
-        fetch('https://graph.microsoft.com/v1.0/groups/e49eee20-ef81-4f29-93aa-951daa958fca/sites/root/lists/7cbc9d8e-f383-46c8-a205-22ac00f3d842/items/'+event.id+'fields', {
+        fetch('https://graph.microsoft.com/v1.0/groups/e49eee20-ef81-4f29-93aa-951daa958fca/sites/root/lists/7cbc9d8e-f383-46c8-a205-22ac00f3d842/items/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(updatedRow)
