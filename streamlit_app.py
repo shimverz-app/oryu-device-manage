@@ -53,7 +53,7 @@ flattened_data = [
 ]
 
 for _ in flattened_data:
-    st.write(type(_['Created']))
+    st.write(dt.datetime.strptime(_['Created'], '%Y-%m-%dT%H:%M:%SZ'))
 
 st.markdown(
     """
