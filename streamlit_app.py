@@ -67,6 +67,8 @@ st.markdown("<span style='font-size: 23px;'>오류중학교 정보화 기기 수
 
 df = pd.DataFrame(flattened_data).sort_values(by='id', ascending = False)
 
+st.write(df)
+
 gb = GridOptionsBuilder().from_dataframe(df)
 gb.configure_default_column(
   filterable=False,
