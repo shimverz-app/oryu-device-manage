@@ -53,7 +53,7 @@ flattened_data = [
 ]
 
 for _ in flattened_data:
-    st.write(dt.datetime.strptime(_['Created'], '%Y-%m-%dT%H:%M:%SZ') + dt.timedelta(hours=9))
+    _['Created'] = dt.datetime.strptime(_['Created'], '%Y-%m-%dT%H:%M:%SZ') + dt.timedelta(hours=9).strftime('%m월 %d일')
 
 st.markdown(
     """
