@@ -45,7 +45,7 @@ r = requests.get('https://graph.microsoft.com/v1.0/groups/e49eee20-ef81-4f29-93a
 flattened_data = [
     {
         key: value for key, value in {
-            "id": item["id"],
+            "id": Int(item["id"]),
             **item["fields"]
         }.items() if key != "@odata.etag"
     }
