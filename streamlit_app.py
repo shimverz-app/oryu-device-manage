@@ -52,6 +52,9 @@ flattened_data = [
     for item in r.json()['value']
 ]
 
+for _ in flattened_data:
+    st.write(type(_['Created']))
+
 st.markdown(
     """
     <style>
@@ -66,8 +69,6 @@ st.markdown(
 st.markdown("<span style='font-size: 23px;'>오류중학교 정보화 기기 수리 요청 대장</span>", unsafe_allow_html=True)
 
 df = pd.DataFrame(flattened_data).sort_values(by='id', ascending = False)
-
-st.write(df)
 
 gb = GridOptionsBuilder().from_dataframe(df)
 gb.configure_default_column(
