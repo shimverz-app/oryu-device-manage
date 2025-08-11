@@ -28,6 +28,7 @@ def token_generate():
             'grant_type': 'password', 'scope': 'https://graph.microsoft.com/AllSites.Write', 'client_id': st.secrets.client_id,
             'username': st.secrets.username, 'password': st.secrets.password, 'client_secret': st.secrets.client_secret })
         st.session_state.createdTime = dt.datetime.now()
+        st.session_state.expireTime = dt.timedelta(seconds=r.json()['expires_in'])
         st.session_state.access_token = r.json()['access_token']
         # st.write(st.session_state.createdTime)
         # st.write(st.session_state.expireTime)
