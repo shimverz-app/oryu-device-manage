@@ -25,8 +25,8 @@ def token_generate():
         return
     else:
         r = requests.post('https://login.microsoftonline.com/4e732c26-acb5-4964-b7fe-cba67063c366/oauth2/v2.0/token', data={
-            'grant_type': 'password', 'scope': 'https://graph.microsoft.com/AllSites.Write', 'client_id': st.secrets.client_id,
-            'username': st.secrets.username, 'password': st.secrets.password, 'client_secret': st.secrets.client_secret })
+            'grant_type': 'client_credentials', 'scope': 'https://graph.microsoft.com/.default https://graph.microsoft.com/AllSites.Write', 'client_id': st.secrets.client_id,
+            'client_secret': st.secrets.client_secret })
         st.session_state.createdTime = dt.datetime.now()
         st.session_state.expireTime = dt.timedelta(seconds=r.json()['expires_in'])
         st.session_state.access_token = r.json()['access_token']
